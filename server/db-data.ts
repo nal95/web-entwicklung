@@ -533,74 +533,74 @@ export const LESSONS = {
   // Ngrx Course
   50: {
     id: 50,
-    "description": "Welcome to the Angular Ngrx Course",
-    "duration": "6:53",
-    "seqNo": 1,
+    'description': 'Welcome to the Angular Ngrx Course',
+    'duration': '6:53',
+    'seqNo': 1,
     courseId: 4
 
   },
   51: {
     id: 51,
-    "description": "The Angular Ngrx Architecture Course - Helicopter View",
-    "duration": "5:52",
-    "seqNo": 2,
+    'description': 'The Angular Ngrx Architecture Course - Helicopter View',
+    'duration': '5:52',
+    'seqNo': 2,
     courseId: 4
   },
   52: {
     id: 52,
-    "description": "The Origins of Flux - Understanding the Famous Facebook Bug Problem",
-    "duration": "8:17",
-    "seqNo": 3,
+    'description': 'The Origins of Flux - Understanding the Famous Facebook Bug Problem',
+    'duration': '8:17',
+    'seqNo': 3,
     courseId: 4
   },
   53: {
     id: 53,
-    "description": "Custom Global Events - Why Don't They Scale In Complexity?",
-    "duration": "7:47",
-    "seqNo": 4,
+    'description': 'Custom Global Events - Why Don\'t They Scale In Complexity?',
+    'duration': '7:47',
+    'seqNo': 4,
     courseId: 4
   },
   54: {
     id: 54,
-    "description": "The Flux Architecture - How Does it Solve Facebook Counter Problem?",
-    "duration": "9:22",
-    "seqNo": 5,
+    'description': 'The Flux Architecture - How Does it Solve Facebook Counter Problem?',
+    'duration': '9:22',
+    'seqNo': 5,
     courseId: 4
   },
   55: {
     id: 55,
-    "description": "Unidirectional Data Flow And The Angular Development Mode",
-    "duration": "7:07",
-    "seqNo": 6,
+    'description': 'Unidirectional Data Flow And The Angular Development Mode',
+    'duration': '7:07',
+    'seqNo': 6,
     courseId: 4
   },
 
   56: {
     id: 56,
-    "description": "Dispatching an Action - Implementing the Login Component",
-    "duration": "4:39",
-    "seqNo": 7,
+    'description': 'Dispatching an Action - Implementing the Login Component',
+    'duration': '4:39',
+    'seqNo': 7,
     courseId: 4
   },
   57: {
     id: 57,
-    "description": "Setting Up the Ngrx DevTools - Demo",
-    "duration": "4:44",
-    "seqNo": 8,
+    'description': 'Setting Up the Ngrx DevTools - Demo',
+    'duration': '4:44',
+    'seqNo': 8,
     courseId: 4
   },
   58: {
     id: 58,
-    "description": "Understanding Reducers - Writing Our First Reducer",
-    "duration": "9:10",
-    "seqNo": 9,
+    'description': 'Understanding Reducers - Writing Our First Reducer',
+    'duration': '9:10',
+    'seqNo': 9,
     courseId: 4
   },
   59: {
     id: 59,
-    "description": "How To Define the Store Initial State",
-    "duration": "9:10",
-    "seqNo": 10,
+    'description': 'How To Define the Store Initial State',
+    'duration': '9:10',
+    'seqNo': 10,
     courseId: 4
   }
 

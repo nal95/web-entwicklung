@@ -1,18 +1,18 @@
-import {Injectable} from "@angular/core";
-import {Actions, createEffect, ofType} from "@ngrx/effects";
-import {AuthActions} from "./action-types";
-import {tap} from "rxjs/operators";
-import {Router} from "@angular/router";
+import {Injectable} from '@angular/core';
+import {Actions, createEffect, ofType} from '@ngrx/effects';
+import {AuthActions} from './action-types';
+import {tap} from 'rxjs/operators';
+import {Router} from '@angular/router';
 
 
 @Injectable()
-export class AuthEffects{
+export class AuthEffects {
 
-  constructor(private actions$:Actions,
-              private router:Router) {}
+  constructor(private actions$: Actions,
+              private router: Router) {}
 
   login$ = createEffect(
-    ()=>
+    () =>
       this.actions$
         .pipe(
           ofType(AuthActions.login),
@@ -20,10 +20,10 @@ export class AuthEffects{
                         JSON.stringify(action.user))
           )
         ),
-    {dispatch:false});
+    {dispatch: false});
 
   logout$ = createEffect(
-    ()=>
+    () =>
       this.actions$
         .pipe(
           ofType(AuthActions.logout),
@@ -32,7 +32,7 @@ export class AuthEffects{
             this.router.navigateByUrl('/login');
           })
         ),
-    {dispatch:false});
+    {dispatch: false});
 
 
 }

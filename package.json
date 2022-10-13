@@ -32,6 +32,7 @@
     "@ngrx/store": "^14.0.0",
     "@ngrx/store-devtools": "^14.0.0",
     "body-parser": "^1.18.2",
+    "codelyzer": "^6.0.2",
     "core-js": "^2.4.1",
     "cors": "^2.8.5",
     "express": "^4.16.2",
@@ -41,7 +42,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^14.0.2",
+    "@angular-devkit/build-angular": "^14.2.6",
     "@angular/cli": "^14.0.2",
     "@angular/compiler-cli": "^14.0.1",
     "@angular/language-service": "^14.0.1",

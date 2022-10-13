@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router} from '@angular/router';
-import {select, Store} from "@ngrx/store";
-import {Observable} from "rxjs";
-import {isLoggedIn, isLoggedOut} from "./auth/auth.selectors";
-import {logout} from "./auth/auth.actions";
-import {AuthActions} from "./auth/action-types";
+import {select, Store} from '@ngrx/store';
+import {Observable} from 'rxjs';
+import {isLoggedIn, isLoggedOut} from './auth/auth.selectors';
+import {logout} from './auth/auth.actions';
+import {AuthActions} from './auth/action-types';
 
 @Component({
   selector: 'app-root',
@@ -15,19 +15,19 @@ export class AppComponent implements OnInit {
 
     loading = true;
 
-    isLoggedIn$:Observable<boolean>;
+    isLoggedIn$: Observable<boolean>;
 
-    isLoggedOut$:Observable<boolean>;
+    isLoggedOut$: Observable<boolean>;
 
     constructor(private router: Router,
-                private store:Store) {
+                private store: Store) {
 
     }
 
     ngOnInit() {
 
       const userProfile = localStorage.getItem('user');
-      if(userProfile){
+      if (userProfile) {
         this.store.dispatch(AuthActions.login({user: JSON.parse(userProfile)}));
       }
 

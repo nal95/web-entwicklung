@@ -17,15 +17,15 @@ import {StoreModule} from '@ngrx/store';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import {AuthGuard} from "./auth/auth.guard";
-import {EffectsModule} from "@ngrx/effects";
+import {AuthGuard} from './auth/auth.guard';
+import {EffectsModule} from '@ngrx/effects';
 
 
 const routes: Routes = [
   {
     path: 'courses',
     loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule),
-    canActivate:[AuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: '**',

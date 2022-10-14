@@ -7,3 +7,4 @@ export interface CoursesState extends EntityState<Course>{
 
 export const adapter = createEntityAdapter<Course>();
 
+export const initialCoursesState = adapter.getInitialState();

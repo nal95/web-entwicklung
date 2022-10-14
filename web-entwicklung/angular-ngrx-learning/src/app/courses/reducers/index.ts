@@ -4,18 +4,22 @@ import {createReducer, on} from "@ngrx/store";
 import {CourseAction} from "../action-types";
 
 export interface CoursesState extends EntityState<Course>{
-
+  allCoursesLoaded:boolean
 }
 
 export const coursesFeatureKey = "courses"
 
 export const adapter = createEntityAdapter<Course>();
 
-export const initialCoursesState = adapter.getInitialState();
+export const initialCoursesState = adapter.getInitialState({
+  allCoursesLoaded:false
+});
 
 export const coursesReducer = createReducer(
   initialCoursesState,
   on(CourseAction.allCoursesLoaded,
-    (state,action)=>adapter.addMany(action.courses,state)
+    (state,action)=>adapter.addMany(
+      action.courses,
+      {...state,allCoursesLoaded:true})
   )
 );

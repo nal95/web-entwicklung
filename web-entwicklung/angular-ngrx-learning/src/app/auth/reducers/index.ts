@@ -8,7 +8,7 @@ import {AuthActions} from '../action-types';
 
 
 export interface AuthState {
-    user: User
+    user: User;
 }
 
 export const initialAuthState: AuthState = {
@@ -22,13 +22,13 @@ export const authReducer = createReducer(
     on(AuthActions.login, (state, action) => {
         return {
             user: action.user
-        }
+        };
     }),
 
     on(AuthActions.logout, (state, action) => {
         return {
             user: undefined
-        }
+        };
     })
 
 

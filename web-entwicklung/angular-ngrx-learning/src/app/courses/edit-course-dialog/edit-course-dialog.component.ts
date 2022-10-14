@@ -6,6 +6,7 @@ import {Observable} from 'rxjs';
 import {CoursesHttpService} from '../services/courses-http.service';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'course-dialog',
   templateUrl: './edit-course-dialog.component.html',
   styleUrls: ['./edit-course-dialog.component.css']
@@ -39,10 +40,10 @@ export class EditCourseDialogComponent {
       promo: ['', []]
     };
 
-    if (this.mode == 'update') {
+    if (this.mode === 'update') {
       this.form = this.fb.group(formControls);
       this.form.patchValue({...data.course});
-    } else if (this.mode == 'create') {
+    } else if (this.mode === 'create') {
       this.form = this.fb.group({
         ...formControls,
         url: ['', Validators.required],

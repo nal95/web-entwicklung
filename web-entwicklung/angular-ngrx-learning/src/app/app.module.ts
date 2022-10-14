@@ -14,12 +14,13 @@ import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
 import {AuthModule} from './auth/auth.module';
 import {StoreModule} from '@ngrx/store';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {environment} from '../environments/environment';
 import {AuthGuard} from './auth/auth.guard';
 import {EffectsModule} from '@ngrx/effects';
-
+import {RouterState, StoreRouterConnectingModule} from "@ngrx/router-store";
+import {metaReducers, reducers} from './reducers';
 
 const routes: Routes = [
   {
@@ -51,9 +52,21 @@ const routes: Routes = [
     MatListModule,
     MatToolbarModule,
     AuthModule.forRoot(),
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot(reducers,{
+      metaReducers,
+      runtimeChecks:{
+        strictStateImmutability:true,
+        strictActionImmutability:true,
+        strictActionSerializability:true,
+        strictStateSerializability:true
+      }
+    }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
+    StoreRouterConnectingModule.forRoot({
+      stateKey:'router',
+      routerState: RouterState.Minimal
+    })
   ],
   bootstrap: [AppComponent]
 })

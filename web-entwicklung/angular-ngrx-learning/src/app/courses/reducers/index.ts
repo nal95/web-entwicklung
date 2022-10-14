@@ -7,6 +7,8 @@ export interface CoursesState extends EntityState<Course>{
 
 }
 
+export const coursesFeatureKey = "courses"
+
 export const adapter = createEntityAdapter<Course>();
 
 export const initialCoursesState = adapter.getInitialState();

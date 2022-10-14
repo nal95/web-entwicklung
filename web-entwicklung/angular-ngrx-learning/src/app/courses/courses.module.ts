@@ -35,7 +35,6 @@ export const coursesRoutes: Routes = [
   }
 ];
 
-
 @NgModule({
   imports: [
     CommonModule,
@@ -73,6 +72,4 @@ export const coursesRoutes: Routes = [
     CoursesHttpService
   ]
 })
-export class CoursesModule {
-
-}
+export class CoursesModule {}
